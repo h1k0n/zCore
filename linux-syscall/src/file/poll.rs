@@ -308,7 +308,7 @@ struct FdSet {
     /// input addr, for update Fdset use
     addr: UserInOutPtr<u32>,
     /// FdSet bit buffer
-    origin: BitVec<Lsb0, u32>,
+    origin: BitVec<u32, Lsb0>,
 }
 
 impl FdSet {
@@ -326,7 +326,7 @@ impl FdSet {
                 return Err(LxError::EINVAL);
             }
             // save the fdset, and clear it
-            let origin = BitVec::from_slice(addr.as_slice(len)?).unwrap();
+            let origin = BitVec::try_from_slice(addr.as_slice(len)?).unwrap();
             let mut vec0 = Vec::<u32>::new();
             vec0.resize(len, 0);
             addr.write_array(&vec0)?;

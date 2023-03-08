@@ -73,20 +73,20 @@ lock = { git = "https://github.com/DeathWish5/kernel-sync", rev = "8486b8" }
 executor = { git = "https://github.com/DeathWish5/PreemptiveScheduler", rev = "e8cd353" }
 
 linux-object = { path = "../linux-object", optional = true }
-rcore-fs = { git = "https://github.com/rcore-os/rcore-fs", rev = "1a3246b", optional = true }
-rcore-fs-sfs = { git = "https://github.com/rcore-os/rcore-fs", rev = "1a3246b", optional = true }
+rcore-fs = { git = "https://github.com/h1k0n/rcore-fs", rev = "4058d7c", optional = true }
+rcore-fs-sfs = { git = "https://github.com/h1k0n/rcore-fs", rev = "4058d7c", optional = true }
 
 # LibOS mode
 [target.'cfg(not(target_os = "none"))'.dependencies]
 async-std = { version = "1.10", optional = true }
 chrono = { version = "0.4", optional = true }
 bitmap-allocator = { git = "https://github.com/rcore-os/bitmap-allocator", rev = "88e871a5" }
-rcore-fs-hostfs = { git = "https://github.com/rcore-os/rcore-fs", rev = "1a3246b", optional = true }
+rcore-fs-hostfs = { git = "https://github.com/h1k0n/rcore-fs", rev = "4058d7c", optional = true }
 
 # RISC-V
 [target.'cfg(any(target_arch = "riscv32", target_arch = "riscv64"))'.dependencies]
 r0 = "1"
-riscv = "0.9"
+riscv = "0.10.1"
 dtb-walker = "=0.2.0-alpha.3"
 page-table = "0.0.6"
 sbi-rt = { version = "0.0.2", features = ["legacy"] }
