@@ -704,7 +704,7 @@ checksum = "0206175f82b8d6bf6652ff7d71a1e27fd2e4efde587fd368662814d6ec1d9ce0"
 [[package]]
 name = "executor"
 version = "0.1.0"
-source = "git+https://github.com/DeathWish5/PreemptiveScheduler?rev=e8cd353#e8cd353100046d2381f752261c3747bd9ee7b79e"
+source = "git+https://github.com/h1k0n/PreemptiveScheduler?rev=3529858#35298582fe2c322b8df056c58173c6a0710c9a81"
 dependencies = [
  "bit-iter",
  "cfg-if 1.0.0",
