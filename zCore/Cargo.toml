@@ -70,7 +70,7 @@ kernel-hal = { path = "../kernel-hal", default-features = false }
 zcore-loader = { path = "../loader", default-features = false }
 zircon-object = { path = "../zircon-object" }
 lock = { git = "https://github.com/DeathWish5/kernel-sync", rev = "8486b8" }
-executor = { git = "https://github.com/h1k0n/PreemptiveScheduler", rev = "3529858" }
+executor = { git = "https://github.com/h1k0n/PreemptiveScheduler", rev = "37bb21b" }
 
 linux-object = { path = "../linux-object", optional = true }
 rcore-fs = { git = "https://github.com/h1k0n/rcore-fs", rev = "4058d7c", optional = true }
