@@ -44,7 +44,7 @@ other-test:
 image: rootfs
 ifeq ($(ARCH), riscv64)
 	@echo building riscv.img
-	@rcore-fs-fuse zCore/riscv64.img rootfs/riscv zip
+	@rcore-fs-fuse zCore/riscv64.img rootfs/riscv64 zip
 	@qemu-img resize -f raw zCore/riscv64.img +200K
 else
 	cargo image --arch $(ARCH)

@@ -260,7 +260,7 @@ else ifeq ($(PLATFORM), c910light)
 else ifeq ($(PLATFORM), cv1811)
 	cp $(build_path)/zcore.bin ./
 	mkimage -f ../prebuilt/firmware/riscv/cr1825_multi.its ./zcore-cv1811.itb
-	cp ./zcore-cv1811.itb /srv/tftp/
+	cp ./zcore-cv1811.itb /tmp
 	sync
 	@echo 'Build zcore-cv1811.itb FIT-uImage done'
 endif
